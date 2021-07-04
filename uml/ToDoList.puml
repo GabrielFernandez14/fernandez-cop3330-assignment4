@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Main {
+    + main()
+    + start()
+}
+class Controller {
+}
+class NewList {
+}
+class PopulateList {
+}
+class RemoveList {
+}
+class EditList {
+}
+class DisplayList {
+}
+class SaveList {
+}
+class GetList {
+}
+
+javafx.Application <|-- Main
+Controller -- Main
+Controller -- NewList
+Controller --- RemoveList
+Controller --- EditList
+Controller --- DisplayList
+Controller -- SaveList
+Controller -- GetList
+NewList -- PopulateList
+
+@enduml

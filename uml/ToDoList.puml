@@ -11,32 +11,103 @@ class Controller {
     - descriptionTextField: TextField
     - datePicker: DatePicker
     - itemList: ListView<AddItems>
+    - doubleClick: EventHandler<MouseEvent>
     - isClicked: boolean
     - isDoubleClicked: boolean
+
+    + newList()
+    + saveCurList()
+    + saveAllLists()
+    + openLists()
+    + loadButtonClicked(): boolean
+    + isItemDoubleClicked()
+    + handleDoubleClick(): boolean
+    + deleteList()
+    + renameList()
+    + displayAllItems()
+    + displayComplete()
+    + displayIncomplete()
+    + newTaskClicked()
+    + refresh()
+    + changeDate()
+    + changeItemDescription()
+    + listDisplayClicked()
+    + removeAnItem()
 }
 class NewList {
+    - newListName: TextField
+    - isNewListClicked: boolean
+    + allLists: ArrayList<String>
+
+    + createNewList()
+    + newListNamer()
+    + newListClicked()
+    + inputIsValid(): boolean
+    + comboBoxInitializer()
 }
+
 class AddItems {
+    - description: String
+    - date: LocalDate
+    - complete: boolean
+    + completedItems: ArrayList<String>
+
+    + getDescription(): String
+    + setDescription()
+    + getDate(): LocalDate
+    + setDate()
+    + AddItems()
+    + formatString(): String
+    + itemMarkedComplete(): boolean
+    + isDoubleClicked(): boolean
+    + storeCompletedItem()
+    + removeItem()
 }
+
 class RemoveList {
+    - selectedList: String
+
+    + removeCurList()
+    + comboUpdater()
 }
+
 class EditList {
+    - renameListName: TextField
+    - itemDescription: TextField
+
+    + renameCurList()
+    + editList()
+    - renameListClicked()
+    - inputIsValid(): boolean
+    - comboBoxUpdater()
 }
+
 class DisplayList {
+    + displayAll()
+    + displayComplete()
+    + displayIncomplete()
 }
+
 class SaveList {
+    + saveCurList()
+    + saveAllLists()
 }
+
 class GetList {
+    - loadButton: Button
+    - listsSelected: ArrayList<String>
+
+    + loadLists()
+    + loadButtonClicked(): boolean
 }
 
 javafx.Application <|-- Main
-Controller -- Main
-Controller -- NewList
-Controller -- RemoveList
-Controller -- EditList
-Controller -- DisplayList
-Controller -- SaveList
-Controller -- GetList
-Controller -- AddItems
-
+Main -- Controller
+Controller - NewList
+Controller - RemoveList
+Controller - EditList
+Controller - DisplayList
+Controller - SaveList
+Controller - GetList
+Controller - AddItems
 @enduml

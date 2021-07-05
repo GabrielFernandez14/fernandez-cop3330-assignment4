@@ -7,13 +7,7 @@
 package ucf.assignments;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ListView;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 
 public class Controller {
     // Create private @FXML variables for the following:
@@ -22,6 +16,10 @@ public class Controller {
     //      TextField descriptionTextField
     //      DatePicker datePicker
     //      ListView<AddItems> itemList
+    //      EventHandler<MouseEvent> doubleClick
+
+    //      isClicked: boolean: false
+    //      isDoubleClicked: boolean: false
 
     @FXML
     public void newList(ActionEvent actionEvent) {
@@ -37,14 +35,45 @@ public class Controller {
 
     @FXML
     public void saveAllLists(ActionEvent actionEvent) {
+        // Create a new instance of Class "SaveList"
+        // Call the saveAllLists() function inside of SaveList
     }
 
     @FXML
     public void openLists(ActionEvent actionEvent) {
+        // Open the ComboBox (if not already opened)
+        // Create a new instance of Class "GetList"
+        // Call the function loadLists() inside of Class GetList
+    }
+
+    // This might cause some issues (when I say might, I mean definitely)
+    @FXML
+    public boolean loadButtonClicked(ActionEvent actionEvent) {
+        // Call loadButtonClicked inside of GetList Class
+        return true;
+    }
+
+    // This might cause some issues (when I say might, I mean definitely)
+    @FXML
+    public void isItemDoubleClicked(ActionEvent actionEvent) {
+        // Check for instance of double click by calling handleDoubleClick()
+        // if: handleDoubleClicked(): is true?
+        //      Call isDoubleClicked() inside of Class AddItems
+    }
+    public boolean handleDoubleClick() {
+        // if: mouseEvent equals: left click?
+        //      if: mouseEvent click count equals 2?
+        //          return true
+        // else:
+        //      return false
+
+        return true;
     }
 
     @FXML
     public void deleteList(ActionEvent actionEvent) {
+        // Create a new instance of RemoveList
+        // Call removeCurList() inside of Class RemoveList
     }
 
     @FXML
@@ -94,7 +123,7 @@ public class Controller {
         // this.description = call editList function inside Class (pass selected description as a param)
     }
 
-    // This function is pretty unnecessary, but is linked to the ListView
+    // This function is pretty unnecessary, but it's linked to the ListView
     // so needs to be reworked someway so that it cooperates better
     // with edits to list items
     @FXML
@@ -103,5 +132,10 @@ public class Controller {
         //      Call changeDate()
         // if: itemDescription: is clicked()
         //      Call changeItemDescription()
+    }
+
+    @FXML
+    public void removeAnItem(ActionEvent actionEvent) {
+        // Call the removeItem() function inside of AddItems
     }
 }

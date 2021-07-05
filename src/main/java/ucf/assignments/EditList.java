@@ -6,22 +6,13 @@
 // This class handles whenever the user wants to edit a certain value in an existing list
 // rather than create new values (definitely isn't necessary, and can probably be combined
 // somehow with NewList Class)
+
+// Responsible for all edits that happen inside of the list's items
+// and/or renaming the current list
 package ucf.assignments;
 
 // Import required packages and libraries
 import javafx.fxml.FXML;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.TextField;
 
 public class EditList {
 

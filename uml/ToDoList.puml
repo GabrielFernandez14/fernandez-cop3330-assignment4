@@ -5,11 +5,18 @@ class Main {
     + main()
     + start()
 }
+
 class Controller {
+    - addButton: Button
+    - descriptionTextField: TextField
+    - datePicker: DatePicker
+    - itemList: ListView<AddItems>
+    - isClicked: boolean
+    - isDoubleClicked: boolean
 }
 class NewList {
 }
-class PopulateList {
+class AddItems {
 }
 class RemoveList {
 }
@@ -25,11 +32,11 @@ class GetList {
 javafx.Application <|-- Main
 Controller -- Main
 Controller -- NewList
-Controller --- RemoveList
-Controller --- EditList
-Controller --- DisplayList
+Controller -- RemoveList
+Controller -- EditList
+Controller -- DisplayList
 Controller -- SaveList
 Controller -- GetList
-NewList -- PopulateList
+Controller -- AddItems
 
 @enduml

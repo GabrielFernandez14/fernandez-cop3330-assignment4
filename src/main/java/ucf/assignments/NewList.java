@@ -4,26 +4,18 @@
  */
 
 // This class handles when a user wishes to create a new list
-// and prompts the user for a name, and then adds the name to the combobox
+// and prompts the user for a name, and then adds the name to the ComboBox
 package ucf.assignments;
 
 // Import appropriate packages
-import javafx.application.Application;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import java.io.IOException;
 
 public class NewList {
     // @FXML needed for the following:
     // private newListName: TextField
     // private isNewListClicked: boolean (init as false)
+
+    /// PUBLIC allLists: ArrayList<String>
 
     // This function is called whenever the user creates a new list
     public void createNewList() {
@@ -60,6 +52,7 @@ public class NewList {
     private void newListClicked() {
         // if: inputIsValid(): is true?
         //      Set newListName to whatever the user has inputted in the TextField
+        //      Store newListName inside of allLists
         //      Set isOkayClicked to true
     }
 

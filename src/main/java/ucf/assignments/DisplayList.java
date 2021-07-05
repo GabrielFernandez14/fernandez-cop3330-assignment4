@@ -3,7 +3,8 @@
  *  Copyright 2021 Gabriel Fernandez
  */
 
-// Called when the user wants to display all, completed, or incomplete items in the current list
+// Called when the user wants to display all, completed, or incomplete items in the current list;
+// Handles all of the user's requests for displaying the list
 package ucf.assignments;
 
 public class DisplayList {

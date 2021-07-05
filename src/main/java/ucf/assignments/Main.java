@@ -12,10 +12,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-// Don't be surprised when my actual method is completely different from this,
-// because to be completely honest this method has so much unnecessary stuff that
-// could be simplified or redone to just be easier
-// My brain no do the think good
+// Yes I do in fact realize my method is extremely overcomplicated
+// Don't worry I hate it just as much if not more than you do
 
 // :)
 

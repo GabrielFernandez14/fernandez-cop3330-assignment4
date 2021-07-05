@@ -6,4 +6,7 @@
 package ucf.assignments;
 
 public class SaveList {
+    public void saveCurList() {
+
+    }
 }

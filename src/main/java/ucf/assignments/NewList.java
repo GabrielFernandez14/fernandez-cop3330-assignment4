@@ -3,6 +3,8 @@
  *  Copyright 2021 Gabriel Fernandez
  */
 
+// This class handles when a user wishes to create a new list
+// and prompts the user for a name, and then adds the name to the combobox
 package ucf.assignments;
 
 // Import appropriate packages
@@ -11,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
@@ -28,7 +31,7 @@ public class NewList {
 
         // if: listNameUpdated (call newListNamer()): is true?
         //      Call newListClicked()
-        //      .................................
+        //      Call comboBoxInitializer()
     }
 
     public boolean newListNamer() {
@@ -56,7 +59,7 @@ public class NewList {
     @FXML
     private void newListClicked() {
         // if: inputIsValid(): is true?
-        //      Set the current instance of item to whatever the user has inputted in the TextField
+        //      Set newListName to whatever the user has inputted in the TextField
         //      Set isOkayClicked to true
     }
 
@@ -82,5 +85,12 @@ public class NewList {
 
         // Arbitrary return value
         return true;
+    }
+
+    @FXML
+    private void comboBoxInitializer() {
+        // Create a new ComboBox variable and initialize using .getItems()
+        // Add a new selection using newListName
+        // .getSelectionModel to have it display the current list
     }
 }

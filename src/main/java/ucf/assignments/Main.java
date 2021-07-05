@@ -12,6 +12,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+// Don't be surprised when my actual method is completely different from this,
+// because to be completely honest this is complete garbage that I don't think would actually work
+// My brain no do the think good
+
+// :)
+
 public class Main extends Application {
 
     public static void main(String[] args) {

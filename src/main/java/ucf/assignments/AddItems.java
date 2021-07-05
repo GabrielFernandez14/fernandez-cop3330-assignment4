@@ -6,6 +6,8 @@
 // This class handles all item additions to the current list
 package ucf.assignments;
 
+import javafx.fxml.FXML;
+
 import java.time.LocalDate;
 
 public class AddItems {
@@ -13,6 +15,9 @@ public class AddItems {
     // private values for the following:
     // description: String
     // date: LocalDate
+    // complete: boolean
+
+    // PUBLIC completedItems: ArrayList<String>
 
     // Getter for description
     public String getDescription() {
@@ -47,4 +52,25 @@ public class AddItems {
         // return correctly formatted date value + description
         return "";
     }
+
+    @FXML
+    // This will need to be an fx:id
+    public boolean itemMarkedComplete() {
+        // If the user has double clicked an item
+        // the program will recognize it as complete
+        // shade the item's TextField to indicate as complete
+
+        // Mark current item as complete
+        // Call storeCompletedItem()
+        // return true
+
+        return true;
+    }
+
+    public void storeCompletedItem() {
+        // Store the date and description into the ArrayList
+        // This will allow for display of completed items to be much easier
+        // as we will have a ready to go list of completed items
+    }
+
 }

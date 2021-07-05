@@ -3,6 +3,7 @@
  *  Copyright 2021 Gabriel Fernandez
  */
 
+// Controller class for the program
 package ucf.assignments;
 
 import javafx.event.ActionEvent;
@@ -13,7 +14,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
 
 public class Controller {
     // Create private @FXML variables for the following:
@@ -49,18 +49,26 @@ public class Controller {
 
     @FXML
     public void renameList(ActionEvent actionEvent) {
+        // Create a new instance of Class EditList
+        // Call renameListClicked() function inside of Class EditList
     }
 
     @FXML
     public void displayAllItems(ActionEvent actionEvent) {
+        // Create a new instance of Class "DisplayList"
+        // Call the displayAll() function inside of displayList
     }
 
     @FXML
     public void displayComplete(ActionEvent actionEvent) {
+        // Create a new instance of Class "DisplayList"
+        // Call the displayComplete() function inside of displayList
     }
 
     @FXML
     public void displayIncomplete(ActionEvent actionEvent) {
+        // Create a new instance of Class "DisplayList"
+        // Call the displayIncomplete() function inside of displayList
     }
 
     @FXML
@@ -77,16 +85,23 @@ public class Controller {
     @FXML
     public void changeDate(ActionEvent actionEvent) {
         // Create a new instance of Class EditList
-        // this.date = call editDate function inside Class (pass date as a param)
+        // this.date = call editList function inside Class (pass date as a param)
     }
 
     @FXML
     public void changeItemDescription(ActionEvent actionEvent) {
         // Create a new instance of Class EditList
-        // this.description = call editDescription function inside Class (pass selected description as a param)
+        // this.description = call editList function inside Class (pass selected description as a param)
     }
 
+    // This function is pretty unnecessary, but is linked to the ListView
+    // so needs to be reworked someway so that it cooperates better
+    // with edits to list items
     @FXML
     public void listDisplayClicked(ActionEvent actionEvent) {
+        // if: date: is clicked?
+        //      Call changeDate()
+        // if: itemDescription: is clicked()
+        //      Call changeItemDescription()
     }
 }

@@ -3,8 +3,12 @@
  *  Copyright 2021 Gabriel Fernandez
  */
 
+// This class handles whenever the user wants to edit a certain value in an existing list
+// rather than create new values (definitely isn't necessary, and can probably be combined
+// somehow with NewList Class)
 package ucf.assignments;
 
+// Import required packages and libraries
 import javafx.fxml.FXML;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -54,9 +58,12 @@ public class EditList {
 
     @FXML
     private void renameListClicked() {
+        // Call renameCurList()
+
         // if: inputIsValid(): is true?
         //      Set renameListName to whatever the user has inputted in the TextField
         //      Set isOkayClicked to true
+        //      Use comboBoxUpdater() to update the name in the given list item
     }
 
     @FXML
@@ -66,7 +73,7 @@ public class EditList {
         // if: No input inside of text field OR length == 0
         //      Concatenate an appropriate error message to errorMessage
         // else:
-        //      Validate that the user inputted a string into the textfield
+        //      Validate that the user inputted a string into the TextField
         //      if: is String?
         //          Do nothing
         //      else:
@@ -84,16 +91,26 @@ public class EditList {
     }
 
     @FXML
-    private void comboBoxInitializer() {
-        // Create a new ComboBox variable and initialize using .getItems()
-        // Add a new selection using newListName
+    private void comboBoxUpdater() {
+        // Use the current ComboBox item of the current list and initialize using .getItems()
+        // Add a new selection using renameListName
         // .getSelectionModel to have it display the current list
     }
 
     // Called whenever the user selects an item from the ListView to edit
+    // Usage of current TextField and date variables
     public void editList() {
         // if: itemDescription: is null?
         //      Display an alert to the user that this item does not exist, and they need to
         //      add an item to the list first
+        // else:
+        //      if: newListName(): is clicked? && inputIsValid(): is true?
+        //          Set TextField itemDescription to the updated TextField given by the user
+
+        // if: date: is equal to given date?
+        //      The user did not edit the date
+        // else:
+        //      The user changed the date, so format appropriately as a string
+        //      along with the updated itemDescription and set as current item description
     }
 }

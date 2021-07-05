@@ -58,7 +58,7 @@
    <left>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <ComboBox layoutY="27.0" onAction="#listDisplay" prefWidth="150.0" />
+            <ComboBox layoutY="27.0" onAction="#listDisplayClicked" prefWidth="150.0" />
             <Label layoutX="37.0" layoutY="6.0" text="Available Lists">
                <font>
                   <Font name="Arial" size="12.0" />

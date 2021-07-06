@@ -8,6 +8,7 @@
 package ucf.assignments;
 
 public class SaveList {
+    // get selected ComboBox item as a param
     public void saveCurList() {
         // Save the selected list by checking to see which list
         // was clicked on in the ComboBox

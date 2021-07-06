@@ -24,6 +24,7 @@ public class NewList {
         // if: listNameUpdated (call newListNamer()): is true?
         //      Call newListClicked()
         //      Call comboBoxInitializer()
+        //      Set newListName equal to the item created by comboBoxInitializer()
     }
 
     public boolean newListNamer() {
